@@ -4,16 +4,23 @@
 }
 body{
     background-image: url(../assets/home/background-home-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
+    overflow: hidden;
+    
+
 }
 
 
-nav{
+header{
     margin: 1em;
+    margin-top: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3.75em;
+
     .logo{
         width: 40px;
     }
@@ -61,7 +68,7 @@ nav{
         margin: 0 10px;
         line-height: 25px;
         letter-spacing: 0;
-        margin-bottom: 70px;
+        margin-bottom: 60px;
 
     }
 
@@ -79,7 +86,52 @@ nav{
         color:#0B0D17;
         border: none;
         text-transform: uppercase;
+
     }
+
+
+
+}
+
+.mobile-nav{
+    z-index: 1000;
+  
+}
+nav{
+    position: absolute;
+    width: 70%;
+    right: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    
+}
+nav ul {
+
+    color: white;
+    height: 100vh;   
+    padding-top: 118px;
+    text-decoration: none;
+
+    li{
+        text-decoration: none;
+        list-style-type: none;
+        text-transform: uppercase;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        margin-bottom: 32px;
+        color: white;
+    }
+    a{text-decoration: none;}
+}
+
+h1{
+    color: white;
+}
+.num{
+    font-weight: bold;
 }
 
 

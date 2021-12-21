@@ -1,7 +1,7 @@
 import React from "react"
 
 
-function MainContent(){
+function Homepage(){
     return(
         <div className="homepage-container">
             <h1 className="homepage-title"> So, you want to travel to <span>space</span></h1>
@@ -11,4 +11,4 @@ function MainContent(){
     )
 }
 
-export default MainContent
+export default Homepage
