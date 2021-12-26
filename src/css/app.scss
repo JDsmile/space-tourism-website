@@ -3,23 +3,24 @@
     margin: 0;
 }
 body{
-    background-image: url(../assets/home/background-home-mobile.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    overflow: hidden;
-    
 
+    overflow: hidden;
+    height: 100vh;
 }
 
 
 header{
-    margin: 1em;
-    margin-top: 24px;
+    position:absolute;
+    padding-top: 24px;
+    padding: 1.25em;
+    top:0;   
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3.75em;
 
     .logo{
         width: 40px;
@@ -28,9 +29,12 @@ header{
 
 //homepage
 .homepage-container{
-
-    margin: 1em;
-    // border: 2px solid red;
+    background-image: url(../assets/home/background-home-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +65,7 @@ header{
     }
 
     .homepage-content{
+        
         font-family: 'Barlow', sans-serif;
         color: #D0D6F9;
         text-align: center;
@@ -68,7 +73,7 @@ header{
         margin: 0 10px;
         line-height: 25px;
         letter-spacing: 0;
-        margin-bottom: 60px;
+        margin-bottom: 90px;
 
     }
 
@@ -88,9 +93,6 @@ header{
         text-transform: uppercase;
 
     }
-
-
-
 }
 
 .mobile-nav{
@@ -135,3 +137,28 @@ h1{
 }
 
 
+//destination page
+
+.destination-content{
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    height: 100vh;
+
+    .destination-title{
+        margin-top: 5em;
+        text-transform: uppercase;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 16px;
+        letter-spacing: 2.7px;
+        font-weight: bold;
+        span{
+            opacity: 0.25;
+            margin-right: 10px;
+        }
+    }
+}

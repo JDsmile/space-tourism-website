@@ -3,16 +3,19 @@
 }
 
 body {
-  background-image: url(../assets/home/background-home-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
 }
 
 header {
-  margin: 1em;
-  margin-top: 24px;
+  position: absolute;
+  padding-top: 24px;
+  padding: 1.25em;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,7 +25,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 3.75em;
 }
 
 header .logo {
@@ -30,7 +32,12 @@ header .logo {
 }
 
 .homepage-container {
-  margin: 1em;
+  background-image: url(../assets/home/background-home-mobile.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,7 +84,7 @@ header .logo {
   margin: 0 10px;
   line-height: 25px;
   letter-spacing: 0;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 
 .homepage-container .mainpage-btn {
@@ -145,5 +152,30 @@ h1 {
 
 .num {
   font-weight: bold;
+}
+
+.destination-content {
+  background-image: url(../assets/destination/background-destination-mobile.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1em;
+  color: white;
+  text-align: center;
+  height: 100vh;
+}
+
+.destination-content .destination-title {
+  margin-top: 5em;
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  font-weight: bold;
+}
+
+.destination-content .destination-title span {
+  opacity: 0.25;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=app.css.map */
