@@ -3,7 +3,7 @@ import logo from '../assets/shared/logo.svg'
 import moblieNav from "../assets/shared/icon-hamburger.svg"
 import closeNav from "../assets/shared/icon-close.svg"
 import {Link} from "react-router-dom"
-import Homepage  from './Homepage';
+import Homepage  from '../pages/Homepage'
 import {Routes,Route} from "react-router-dom"
 
 

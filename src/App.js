@@ -4,7 +4,7 @@ import React, {useContext}from 'react';
 import Header from './components/Header'
 import {BrowserRouter as Router} from "react-router-dom"
 import {Routes,Route} from "react-router-dom"
-import Homepage  from './components/Homepage';
+import Homepage  from './pages/Homepage'
 import Crew from "./pages/Crew"
 import Destination from "./pages/Destination"
 import Technology from "./pages/Technology"
