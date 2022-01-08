@@ -247,4 +247,10 @@ h1 {
   color: white;
   font-weight: 400;
 }
+
+.destination-content .active-tab {
+  padding-bottom: 5px;
+  border-bottom: 3px solid white;
+  width: auto;
+}
 /*# sourceMappingURL=app.css.map */

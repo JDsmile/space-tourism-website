@@ -89,6 +89,7 @@ header{
         text-transform: uppercase;
         text-decoration: none;
     }
+
     a{
         text-decoration: none;
     }
@@ -215,6 +216,13 @@ h1{
             font-weight: 400;
         }
     }
+    .active-tab{
+        padding-bottom: 5px;
+        border-bottom: 3px solid white;
+        width: auto;
+    }
 }
+
+
 
 
