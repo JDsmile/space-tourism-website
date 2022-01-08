@@ -3,11 +3,8 @@
     margin: 0;
 }
 body{
-
-    overflow: hidden;
     height: 100vh;
 }
-
 
 header{
     position:absolute;
@@ -74,7 +71,6 @@ header{
         line-height: 25px;
         letter-spacing: 0;
         margin-bottom: 90px;
-
     }
 
     .mainpage-btn{
@@ -147,8 +143,6 @@ h1{
     padding: 1em;
     color: white;
     text-align: center;
-    height: 100vh;
-
     .destination-title{
         margin-top: 5em;
         text-transform: uppercase;
@@ -156,9 +150,68 @@ h1{
         font-size: 16px;
         letter-spacing: 2.7px;
         font-weight: bold;
+        margin-bottom: 2.75em;
         span{
             opacity: 0.25;
             margin-right: 10px;
         }
     }
+
+    .destination-pic{
+        width: 60%;
+        margin-bottom: 1em;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 1.5em;
+        padding: 0;
+    }
+    li{
+        list-style-type: none;
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed', sans-serif;
+        letter-spacing: 3px;   
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+    .title{
+        text-transform: uppercase;
+        font-size: 56px;
+        font-family: 'Bellefair', serif;
+        margin-bottom: 0.2em;
+        font-weight: normal;
+    }
+    .description{
+        font-size: 15px;
+        line-height: 25px;
+        color: #D0D6F9;
+        padding-bottom: 2em;
+        border-bottom: 1px solid #383B4B;
+        margin-bottom: 1.5em;   
+    }
+
+    footer{
+        text-transform: uppercase;
+
+        h3{
+            font-size: 14px;
+            margin-bottom: 0.5em;
+            color: #D0D6F9;
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 2.3625px;
+        }
+
+        h2{
+            font-size: 28px;
+            margin-bottom: 1em;
+            font-family: 'Bellefair', serif;
+            color: white;
+            font-weight: 400;
+        }
+    }
 }
+
+
