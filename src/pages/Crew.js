@@ -32,7 +32,7 @@ function Crew(){
                     {
                         crew.map((item,value) =>{
                             return(
-                                <li onClick={()=>showcontent(item,value)} className={`tab ${value===index ? "active-tab" : undefined}`}></li>
+                                <li key={value}onClick={()=>showcontent(item,value)} className={`tab ${value===index ? "active-tab" : undefined}`}></li>
                             )
                         })
                     }
