@@ -15,8 +15,7 @@ function Destination(){
     
     function changeContent(value,name){
 
-        setIndex(value)
-        
+        setIndex(value)        
         if(name ==="Mars"){
             setImg(mars)
         } else if(name==="Europa"){
@@ -34,12 +33,11 @@ function Destination(){
                 <h5 className="destination-title"> <span>01</span> pick your destination</h5>
                
                 <img src={img} alt={data[index].name} className="destination-pic"/>
-
                 <ul>
                 {
                     data.map((item,value)=>{
                         return(
-                                <li onClick={()=>changeContent(value,item.name) } className={value===index ? "active-tab" : undefined}>{item.name}</li>
+                                <li key={value} onClick={()=>changeContent(value,item.name) } className={value===index ? "active-tab" : undefined}>{item.name}</li>
                         )
                     })
                 }

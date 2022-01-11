@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -24,6 +26,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1000;
 }
 
 header .logo {
@@ -161,7 +164,7 @@ h1 {
 .destination-content {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   padding: 1em;
   color: white;
@@ -175,7 +178,7 @@ h1 {
   font-size: 16px;
   letter-spacing: 2.7px;
   font-weight: bold;
-  margin-bottom: 2.75em;
+  margin-bottom: 2.5em;
 }
 
 .destination-content .destination-title span {
@@ -252,5 +255,205 @@ h1 {
   padding-bottom: 5px;
   border-bottom: 3px solid white;
   width: auto;
+}
+
+.crews-container {
+  background-image: url(../assets/crew/background-crew-mobile.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 1em;
+  color: white;
+  text-align: center;
+}
+
+.crews-container .crews-title {
+  margin-top: 5em;
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  font-weight: bold;
+  margin-bottom: 2.5em;
+}
+
+.crews-container .crews-title span {
+  opacity: 0.25;
+  margin-right: 10px;
+}
+
+.crews-container .crew-image {
+  width: 327px;
+  height: 223px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.crews-container .img-container {
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.crews-container .img-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 1px;
+  background-color: #383B4B;
+}
+
+.crews-container ul {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 88px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.crews-container .tab {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  list-style-type: none;
+  opacity: 0.17;
+  margin-bottom: 1em;
+}
+
+.crews-container .active-tab {
+  opacity: 1;
+}
+
+.crews-container .crew-role {
+  font-size: 16px;
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0.5;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.crews-container .crew-name {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-family: 'Bellefair', serif;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+.crews-container .crew-bio {
+  font-size: 15px;
+  color: #D0D6F9;
+  line-height: 25px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.tech-container {
+  background-image: url(../assets/technology/background-technology-mobile.jpg);
+  height: 100vh;
+  padding: 1em;
+  color: white;
+  text-align: center;
+}
+
+.tech-container .tech-title {
+  margin-top: 5em;
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  font-weight: bold;
+  margin-bottom: 2.5em;
+}
+
+.tech-container .tech-title span {
+  opacity: 0.25;
+  margin-right: 10px;
+}
+
+.tech-container .tech-pic {
+  width: 375px;
+  height: 170px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: -1em;
+  margin-bottom: 1em;
+}
+
+.tech-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  width: 152px;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+}
+
+.tech-container ul li {
+  list-style-type: none;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  font-size: 16px;
+  color: white;
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+}
+
+.tech-container ul .active-tab {
+  background-color: white;
+  color: #0B0D17;
+}
+
+.tech-container h2 {
+  text-transform: uppercase;
+  margin-bottom: 0.75em;
+  color: #D0D6F9;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.36px;
+}
+
+.tech-container .tech-name {
+  text-transform: uppercase;
+  font-family: 'Bellefair', serif;
+  font-size: 24px;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.tech-container .description {
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: #D0D6F9;
 }
 /*# sourceMappingURL=app.css.map */
