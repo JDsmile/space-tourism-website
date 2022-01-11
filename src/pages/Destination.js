@@ -1,4 +1,4 @@
-import React,  {useEffect}from "react"
+import React,  {useEffect, useState}from "react"
 import {Link} from "react-router-dom"
 import destinations from "../data.json"
 import moon from "../assets/destination/image-moon.png"
@@ -13,8 +13,9 @@ function Destination(){
     const [index,setIndex] = React.useState(0)
     const [img,setImg] = React.useState(moon)
     
-    function changeContent(index,name){
-        setIndex(index)
+    function changeContent(value,name){
+
+        setIndex(value)        
         if(name ==="Mars"){
             setImg(mars)
         } else if(name==="Europa"){
@@ -25,18 +26,18 @@ function Destination(){
             setImg(moon)
         }
     }
+
         if(data){
             return(
             <div className="destination-content" >
                 <h5 className="destination-title"> <span>01</span> pick your destination</h5>
                
                 <img src={img} alt={data[index].name} className="destination-pic"/>
-
                 <ul>
                 {
-                    data.map((item,index)=>{
+                    data.map((item,value)=>{
                         return(
-                                <li onClick={()=>changeContent(index,item.name)}>{item.name}</li>
+                                <li key={value} onClick={()=>changeContent(value,item.name) } className={value===index ? "active-tab" : undefined}>{item.name}</li>
                         )
                     })
                 }
