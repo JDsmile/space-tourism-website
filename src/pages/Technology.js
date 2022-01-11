@@ -31,7 +31,7 @@ function Technology(){
                 {
                     data.map((item,value)=>{
                         return(
-                            <li onClick={()=>activeContent(item.name,value)} className={value === index ? "active-tab": undefined}>{value+1}</li>
+                            <li key={value} onClick={()=>activeContent(item.name,value) } className={value === index ? "active-tab": undefined}>{value+1}</li>
                         )
                     })
                 }
