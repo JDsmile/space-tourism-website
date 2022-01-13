@@ -28,6 +28,7 @@ function Crew(){
             <div className="img-container">
                 <img src={crewImage} alt="" className="crew-image" />
             </div>
+          
                 <ul>
                     {
                         crew.map((item,value) =>{

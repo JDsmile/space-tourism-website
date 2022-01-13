@@ -37,7 +37,7 @@ function Destination(){
                 {
                     data.map((item,value)=>{
                         return(
-                                <li key={value} onClick={()=>changeContent(value,item.name) } className={value===index ? "active-tab" : undefined}>{item.name}</li>
+                                <li key={value} onClick={()=>changeContent(value,item.name) } className={value===index ? "active-tab" : ""}>{item.name}</li>
                         )
                     })
                 }
@@ -47,11 +47,15 @@ function Destination(){
                 <p className="description">{data[index].description}</p>
 
                 <footer>
-                    <h3>avg.distance</h3>
-                    <h2>{data[index].distance}</h2>
-
-                    <h3>est.Travel time</h3>
-                    <h2>{data[index].travel}</h2>
+                    <div className="left">
+                        <h3>avg.distance</h3>
+                        <h2>{data[index].distance}</h2>
+                    </div>
+                    
+                    <div className="right">
+                        <h3>est.Travel time</h3>
+                        <h2>{data[index].travel}</h2>
+                    </div>
                 </footer>
             </div>
             )
