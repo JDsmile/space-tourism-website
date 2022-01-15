@@ -25,23 +25,30 @@ function Crew(){
     return(
         <div className="crews-container">
             <h5 className="crews-title"> <span>02</span> meet your crew</h5>
-            <div className="img-container">
-                <img src={crewImage} alt="" className="crew-image" />
-            </div>
-          
-                <ul>
-                    {
-                        crew.map((item,value) =>{
-                            return(
-                                <li key={value}onClick={()=>showcontent(item,value)} className={`tab ${value===index ? "active-tab" : undefined}`}></li>
-                            )
-                        })
-                    }
-                </ul>
+            <section className="crew-content">
+
                 
-                <h2 className="crew-role">{crew[index].role}</h2>
-                <h2 className="crew-name">{crew[index].name}</h2>
-                <p className="crew-bio">{crew[index].bio}</p>
+                <div className="img-container">
+                    <img src={crewImage} alt="" className="crew-image" />
+                </div>
+                
+                <div className="main-content">
+                    <ul>
+                        {
+                            crew.map((item,value) =>{
+                                return(
+                                    <li key={value}onClick={()=>showcontent(item,value)} className={`tab ${value===index ? "active-tab" : undefined}`}></li>
+                                )
+                            })
+                        }
+                    </ul>
+                    <h2 className="crew-role">{crew[index].role}</h2>
+                    <h2 className="crew-name">{crew[index].name}</h2>
+                    <p className="crew-bio">{crew[index].bio}</p>
+                </div>
+
+                
+            </section>
         </div>
     )
 }
