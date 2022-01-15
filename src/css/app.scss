@@ -648,13 +648,15 @@ h1{
         font-family: 'Bellefair', serif;
         font-weight: 500;
         margin-bottom: 1em;
+
         @include tablet(){
             font-size: 48px;
             margin-bottom: 0.5em;
         }
 
         @include desktop(){
-            font-size: 56px;
+            font-size: 54px;
+            
         }
 
     }
