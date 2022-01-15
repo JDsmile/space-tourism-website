@@ -61,7 +61,6 @@ function Technology(){
          
         }else if(value===0){
             setImg(img1)
-       
         }
     }
     return(

@@ -1,13 +1,19 @@
 @mixin tablet {
     @media (min-width:768px){@content}
 }
+
+@mixin desktop {
+    @media (min-width:1440px){@content}
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
+
 }
 body{
-    height: 100vh;
-
+    min-height: 100vh;
+    margin: 0 auto;
 
 }
 
@@ -24,7 +30,6 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    max-width: 1440px;
     
 
     .logo{
@@ -32,7 +37,26 @@ header{
         @include tablet{
             width: 48px;
             height: 48px;
+      
         }
+        @include desktop(){
+            margin-left: 3em;
+            position:static;
+
+        }
+    }
+    @include tablet(){
+        padding: 0;
+        position: absolute;
+      
+    }
+
+    @include desktop(){
+        padding: 0;
+        padding-top: 24px;
+        position:absolute;
+
+       
     }
 }
 
@@ -53,6 +77,7 @@ header{
     top: 0;
     background: rgba(255, 255, 255,0.04);
     backdrop-filter: blur(81.5485px);
+  
     
  
     @include tablet{
@@ -66,7 +91,11 @@ header{
         padding: 37.5px 0 34.5px 0 ;
         }
     
-    }   
+    }  
+    
+    @include desktop(){
+        min-width: 830px;
+    }
     
 }
 
@@ -104,6 +133,9 @@ nav ul {
             letter-spacing: 2.36px;
 
         }
+        @include desktop(){
+            font-size: 16px;
+        }
     }
     a{text-decoration: none;}
 }
@@ -126,6 +158,14 @@ nav ul {
         padding-top: 5em;
     }
 
+    @include desktop(){
+        background-image: url(../assets/home/background-home-desktop.jpg);
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 20em;
+        
+    }
+
     .homepage-title{
         color:white;
         font-family: 'Barlow Condensed', sans-serif;
@@ -140,6 +180,11 @@ nav ul {
             font-size: 24px;
             letter-spacing: 3.375px;
         }
+        @include desktop(){
+            text-align: left;
+            font-size: 28px;
+            letter-spacing: 4.725px;
+        }
     
     
          span{
@@ -153,6 +198,9 @@ nav ul {
             letter-spacing: 0;
             @include tablet{
                 font-size: 150px;
+            }
+            @include desktop(){
+                text-align: left;
             }
         }
     }
@@ -171,6 +219,10 @@ nav ul {
             font-size: 16px;
             width: 444px;
             line-height: 28px;
+        }
+        @include desktop(){
+            text-align: left;
+            font-size: 18px;
         }
     }
 
@@ -194,6 +246,10 @@ nav ul {
             height: 242px;
             font-size: 32px;
         }
+        @include desktop(){
+            width: 274px;
+            height: 274px;
+        }
     }
 
     a{
@@ -210,6 +266,10 @@ h1{
     @include tablet{
         display: none;
     }
+    @include desktop(){
+        display: inline-block;
+        margin-right: 11px;
+    }
 }
 
 
@@ -225,10 +285,25 @@ h1{
     @include tablet(){
         background-image: url(../assets/destination/background-destination-tablet.jpg);
     }
+
+    @include desktop(){
+        background-image: url(../assets/destination/background-destination-desktop.jpg);
+    }
    
     padding: 1em;
     color: white;
     text-align: center;
+
+    .main-content{
+        @include desktop(){
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: left;
+
+
+        };
+    }
     
     .destination-title{
         margin-top: 5em;
@@ -251,6 +326,13 @@ h1{
             font-size: 20px;
             letter-spacing: 3.38px;
         }
+
+        @include desktop(){
+            font-size: 28px;
+            letter-spacing: 4.725px;
+            margin-left: 5em;
+            margin-top: 6em;  
+        }
     }
 
     .destination-pic{
@@ -258,8 +340,13 @@ h1{
         margin-bottom: 1em;
         @include tablet(){
             width: 300px;
-            height: 300px;
+            height: auto;
             margin-bottom: 2.5em;
+        }
+
+        @include desktop(){
+            min-width: 445px;
+            height: auto;
         }
 
     }
@@ -274,6 +361,11 @@ h1{
             width: 50%;
             margin: 0 auto;
             margin-bottom: 2em;
+        }
+        @include desktop(){
+            width: 22em;
+            margin-left:0;
+            justify-content: space-between;
         }
     }
     li{
@@ -293,6 +385,9 @@ h1{
         @include tablet(){
             font-size: 80px;
         }
+        @include desktop(){
+            font-size: 100px;
+        }
     }
     .description{
         font-size: 15px;
@@ -301,6 +396,7 @@ h1{
         padding-bottom: 2em;
         border-bottom: 1px solid #383B4B;
         margin-bottom: 1.5em;  
+        font-family: Barlow;
         @include tablet(){
             max-width: 580px;
             margin: 0 auto;
@@ -308,16 +404,31 @@ h1{
             font-size: 16px;
             line-height: 28px;
         } 
+        @include desktop(){
+            max-width: 445px;
+            line-height: 32px;
+            font-size: 18px;
+            
+        }
     }
 
     footer{
         text-transform: uppercase;
+       
+
         @include tablet(){
             display: flex;
             max-width: 600px;
             justify-content: space-around;
             margin: 0 auto;
             margin-top: 2em;
+            
+        }
+        @include desktop(){
+               width: 22em;
+               margin-left:0;
+               justify-content: space-between;
+               text-align: left;
         }
 
         h3{
@@ -335,6 +446,8 @@ h1{
             color: white;
             font-weight: 400;
         }
+
+       
     }
     .active-tab{
         padding-bottom: 5px;
@@ -354,14 +467,49 @@ h1{
     padding: 1em;
     color: white;
     text-align: center;
-   
     
+  
 
     @include tablet(){
         background-image: url(../assets/crew/background-crew-tablet.jpg);
-        display: flex;
-        flex-direction: column;
         padding-bottom: 0; 
+    }
+
+    @include desktop(){
+        background-image: url(../assets/crew/background-crew-desktop.jpg);
+        overflow: hidden;
+        margin: 0 auto;
+        
+    }
+
+
+    .crew-content{
+        @include tablet(){
+            display: flex;
+            flex-direction: column;
+        }
+        @include desktop(){
+            flex-direction: row;
+            align-items: center   ;
+            justify-content: space-between;
+            text-align: left;     
+            padding-left: 8em;      
+            padding-top: 3em;            
+   
+
+        }
+    }
+
+    .main-content{
+        display: flex;
+        flex-direction: column;  
+
+        @include tablet(){
+            margin-bottom: 1.5em;
+        }
+        @include desktop(){
+            margin-bottom: 0;
+        }
     }
 
     .crews-title{
@@ -384,26 +532,43 @@ h1{
             letter-spacing: 3.38px;
             margin-bottom: 1.75em;
         }
+
+        @include desktop(){
+            font-size: 28px;
+            letter-spacing: 4.725px;
+            margin-left: 5em;
+            margin-top: 6em;  
+
+        }
     }
     .crew-image{
         width: 327px;
         height: 223px;
         object-fit: contain;
         @include tablet(){
-            width: 456px;
-            height: 572px;
+            width: 540px;
+            height: 579px;
         }
 
+        @include desktop(){
+    
+        height: 712px;
+        width: 680px;
+        }
     }
     
     .img-container{
         position: relative;
         margin-bottom: 1.5em;
-        order:3;
+    
+        
         @include tablet(){
-            margin: 0 auto;
+            order: 2;
             margin-bottom: 0;
+        }
 
+        @include desktop(){
+            object-fit: cover;
         }
     }
 
@@ -428,7 +593,18 @@ h1{
         justify-content: space-between;
         width: 88px;
         align-items: center;
-        order: 2;
+
+        @include tablet(){
+            order: 3;
+        }
+       
+        @include desktop(){
+            width: 132px;
+            margin-left: 0;
+            margin-top: 5em;  
+             order: 2;          
+
+        }
     }
 
     .tab{
@@ -439,6 +615,11 @@ h1{
         list-style-type: none;
         opacity: 0.17;
         margin-bottom: 1em;
+        @include desktop(){
+            width: 15px;
+            height: 15px;
+            
+        }
     }
 
     .active-tab{
@@ -455,6 +636,9 @@ h1{
         @include tablet(){
             font-size: 24px;
         }
+        @include desktop(){
+            font-size: 32px;
+        }
 
     }
     .crew-name{
@@ -469,6 +653,10 @@ h1{
             margin-bottom: 0.5em;
         }
 
+        @include desktop(){
+            font-size: 56px;
+        }
+
     }
     .crew-bio{
         font-size: 15px;
@@ -481,6 +669,12 @@ h1{
             font-size: 16px;
             line-height: 28px;
             margin-bottom: 2.5em;
+        }
+
+        @include desktop(){
+            margin-left: 0;
+            font-size: 18px;
+            line-height: 32px;
         }
     }
 

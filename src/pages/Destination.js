@@ -31,32 +31,38 @@ function Destination(){
             return(
             <div className="destination-content" >
                 <h5 className="destination-title"> <span>01</span> pick your destination</h5>
-               
-                <img src={img} alt={data[index].name} className="destination-pic"/>
-                <ul>
-                {
-                    data.map((item,value)=>{
-                        return(
-                                <li key={value} onClick={()=>changeContent(value,item.name) } className={value===index ? "active-tab" : ""}>{item.name}</li>
-                        )
-                    })
-                }
-                </ul>
+                
+                <section className="main-content">
+                    <img src={img} alt={data[index].name} className="destination-pic"/>
 
-                <h1 className="title" >{data[index].name }</h1>
-                <p className="description">{data[index].description}</p>
+                    <div>
+                        <ul>
+                        {
+                            data.map((item,value)=>{
+                                return(
+                                        <li key={value} onClick={()=>changeContent(value,item.name) } className={value===index ? "active-tab" : ""}>{item.name}</li>
+                                )
+                            })
+                        }
+                        </ul>
 
-                <footer>
-                    <div className="left">
-                        <h3>avg.distance</h3>
-                        <h2>{data[index].distance}</h2>
+                        <h1 className="title" >{data[index].name }</h1>
+                        <p className="description">{data[index].description}</p>
+
+                        <footer>
+                            <div className="left">
+                                <h3>avg.distance</h3>
+                                <h2>{data[index].distance}</h2>
+                            </div>
+                            
+                            <div className="right">
+                                <h3>est.Travel time</h3>
+                                <h2>{data[index].travel}</h2>
+                            </div>
+                        </footer>
                     </div>
-                    
-                    <div className="right">
-                        <h3>est.Travel time</h3>
-                        <h2>{data[index].travel}</h2>
-                    </div>
-                </footer>
+
+                </section>
             </div>
             )
         }
