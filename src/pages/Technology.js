@@ -20,35 +20,35 @@ function Technology(){
 
 
     //change image if resizing the 
-    // const [windowWidth, setDimensions] = React.useState(
-    //     window.innerWidth
-    //   )
-    //   const handleResize = () => {
-    //     setDimensions(window.innerWidth);
-    //   }
+    const [windowWidth, setDimensions] = React.useState(
+        window.innerWidth
+      )
+      const handleResize = () => {
+        setDimensions(window.innerWidth);
+      }
     
-    //   React.useEffect(() => {
-    //     window.addEventListener('resize', handleResize)
+      React.useEffect(() => {
+        window.addEventListener('resize', handleResize)
         
-    //     if(index===1){
-    //         setImg(img2)
-    //         if(windowWidth>=768){
-    //             setImg(img2p)
-    //         }
-    //     }else if(index===2){
-    //         setImg(img3)
-    //         if(windowWidth>=768){
-    //             setImg(img3p)
-    //         }
+        if(index===1){
+            setImg(img2)
+            if(windowWidth>=1440){
+                setImg(img2p)
+            }
+        }else if(index===2){
+            setImg(img3)
+            if(windowWidth>=1440){
+                setImg(img3p)
+            }
 
-    //     }else if(index===0){
-    //         setImg(img1)
-    //         if(windowWidth>=768){
-    //             setImg(img1p)
-    //         }
-    //     }
-    //     return () => { window.removeEventListener('resize', handleResize) }
-    //   });
+        }else if(index===0){
+            setImg(img1)
+            if(windowWidth>=1440){
+                setImg(img1p)
+            }
+        }
+        return () => { window.removeEventListener('resize', handleResize) }
+      });
 
  
     function activeContent(item,value){
@@ -67,20 +67,27 @@ function Technology(){
         <div className="tech-container">
             <h5 className="tech-title"> <span>03</span> space launch 101</h5>
 
+            <div className="flex-container">
 
-            <img src={img} alt="" className="tech-pic"/>
-            <ul>
-                {
-                    data.map((item,value)=>{
-                        return(
-                            <li key={value} onClick={()=>activeContent(item.name,value) } className={value === index ? "active-tab": undefined}>{value+1}</li>
-                        )
-                    })
-                }
-            </ul>
-            <h2>the terminology...</h2>
-            <h1 className="tech-name">{data[index].name}</h1>
-            <p className="description">{data[index].description}</p>
+            
+                <img src={img} alt="" className="tech-pic"/>
+                
+                <ul>
+                    {
+                        data.map((item,value)=>{
+                            return(
+                                <li key={value} onClick={()=>activeContent(item.name,value) } className={value === index ? "active-tab": undefined}>{value+1}</li>
+                            )
+                        })
+                    }
+                </ul>
+
+                <div>
+                    <h2>the terminology...</h2>
+                    <h1 className="tech-name">{data[index].name}</h1>
+                    <p className="description">{data[index].description}</p>
+                </div>
+            </div>
         </div>
     )
 }

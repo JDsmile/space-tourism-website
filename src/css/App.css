@@ -38,6 +38,7 @@ header .logo {
   header .logo {
     width: 48px;
     height: 48px;
+    margin-left: 2em;
   }
 }
 
@@ -624,7 +625,6 @@ h1 {
             justify-content: space-between;
     text-align: left;
     padding-left: 8em;
-    padding-top: 3em;
   }
 }
 
@@ -680,7 +680,7 @@ h1 {
     font-size: 28px;
     letter-spacing: 4.725px;
     margin-left: 5em;
-    margin-top: 6em;
+    margin-bottom: 0;
   }
 }
 
@@ -838,7 +838,7 @@ h1 {
 
 @media (min-width: 1440px) {
   .crews-container .crew-name {
-    font-size: 56px;
+    font-size: 54px;
   }
 }
 
@@ -877,6 +877,20 @@ h1 {
   background-size: cover;
 }
 
+@media (min-width: 1440px) {
+  .tech-container .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .tech-container .tech-title {
   margin-top: 5em;
   text-transform: uppercase;
@@ -901,6 +915,24 @@ h1 {
   }
 }
 
+@media (min-width: 1440px) {
+  .tech-container .tech-title {
+    font-size: 28px;
+    letter-spacing: 4.725px;
+    margin-left: 5em;
+    margin-top: 6em;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tech-container {
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+    text-align: left;
+    padding-right: 0;
+  }
+}
+
 .tech-container .tech-pic {
   width: 375px;
   height: 170px;
@@ -908,13 +940,28 @@ h1 {
      object-fit: contain;
   margin-left: -1em;
   margin-bottom: 1em;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .tech-container .tech-pic {
-    min-width: 768px;
+    width: 768px;
     height: 310px;
     margin-bottom: 2.5em;
+    margin-left: -1em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tech-container .tech-pic {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 515px;
+    height: 527px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 0;
   }
 }
 
@@ -933,8 +980,24 @@ h1 {
 
 @media (min-width: 768px) {
   .tech-container ul {
-    min-width: 210px;
+    width: 210px;
     margin-bottom: 2.5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tech-container ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    width: auto;
+    margin: 0;
+    margin-left: 8em;
+    margin-right: 5em;
   }
 }
 
@@ -964,6 +1027,15 @@ h1 {
     width: 60px;
     height: 60px;
     font-size: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tech-container ul li {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    margin-bottom: 1em;
   }
 }
 
@@ -1002,6 +1074,12 @@ h1 {
   }
 }
 
+@media (min-width: 1440px) {
+  .tech-container .tech-name {
+    font-size: 56px;
+  }
+}
+
 .tech-container .description {
   font-family: 'Barlow', sans-serif;
   font-size: 15px;
@@ -1015,6 +1093,13 @@ h1 {
     font-size: 16px;
     max-width: 458px;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tech-container .description {
+    font-size: 18px;
+    line-height: 32px;
   }
 }
 /*# sourceMappingURL=app.css.map */
