@@ -463,6 +463,7 @@ h1 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    cursor: pointer;
   }
 }
 
@@ -774,6 +775,7 @@ h1 {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    cursor: pointer;
   }
 }
 
@@ -998,6 +1000,7 @@ h1 {
     margin: 0;
     margin-left: 8em;
     margin-right: 5em;
+    cursor: pointer;
   }
 }
 
