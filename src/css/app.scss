@@ -18,7 +18,7 @@ body{
 }
 
 header{
-    position:fixed;
+    position:absolute;
     padding-top: 24px;
     padding: 1.25em;
     top:0;   
@@ -231,7 +231,7 @@ nav ul {
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        display: flex;
+        display:flex;
         justify-content: center;
         align-items: center;
         font-family: 'Bellefair', serif;
@@ -242,6 +242,8 @@ nav ul {
         border: none;
         text-transform: uppercase;
         text-decoration: none;
+        background-color: white;
+
         @include tablet{
             width: 242px;
             height: 242px;
@@ -685,12 +687,19 @@ h1{
 
 .tech-container{
     background-image: url(../assets/technology/background-technology-mobile.jpg);
-    height: 100vh;
+    min-height: 100vh;
     padding: 1em;
     color: white;
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include desktop(){
+        background-image: url(../assets/technology/background-technology-desktop.jpg);
+        text-align: left;
+        padding-right: 0;
+    }
+
 
 
     .flex-container{
@@ -732,19 +741,14 @@ h1{
         
     }
 
-    @include desktop(){
-        background-image: url(../assets/technology/background-technology-desktop.jpg);
-        text-align: left;
-        padding-right: 0;
-    }
-
+  
     .tech-pic{
         width: 375px;
         height: 170px;
         object-fit: contain;
         margin-left: -1em;
         margin-bottom: 1em;
-        margin: 0 auto;
+        // margin: 0 auto;
         
         @include tablet(){
             width:768px;

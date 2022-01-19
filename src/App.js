@@ -19,7 +19,7 @@ function App() {
 
   return (
 
-      <Router>
+      <Router basename="space-tourism-website">
             <Header/>  
             <Routes>
               <Route path="/" element={<Homepage />}/>
