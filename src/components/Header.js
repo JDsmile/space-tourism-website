@@ -7,6 +7,8 @@ import Homepage  from '../pages/Homepage'
 import {Routes,Route} from "react-router-dom"
 import { useEffect } from "react/cjs/react.development"
 
+import {BrowserRouter } from "react-router-dom"
+
 
 
 function Header(){
@@ -60,11 +62,13 @@ function Header(){
             <img src={openNav ? moblieNav : closeNav} alt="navigation" onClick={toggleMenu} className='mobile-nav'/>  
    
             <nav className="navi" style={style}>
+                
                 <ul>
 
                     {
                         links.map((link,value)=>{
                             return(
+                              
                                 <Link to ={link.to} key={link.id} onClick={()=>toggleMenu(link,value)}><li  className={value===index ? "active-tab" : undefined}><span className="num">{link.num} </span>{link.name}</li></Link>
                             )
                         })
